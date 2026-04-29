@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Le Petit Burger** is a fully functional restaurant website originally built with vanilla HTML, CSS, and JavaScript (Homeworks 1 & 2). The goal of **Homework 3** is to **completely rebuild this website using React**, styled with a CSS framework, while preserving the exact same look, feel, content, and all features from the previous homeworks.
+**Le Petit Burger** is a fully functional restaurant website originally built with vanilla HTML, CSS, and JavaScript. 
 
 The rebuilt site must be:
 - Hosted online (e.g., Netlify, Vercel)
@@ -317,36 +317,7 @@ export const menuItems = [
   { id: 11, category: "desserts", name: "Vanilla Soft Serve", desc: "Classic creamy cone or cup", price: 2.99, image: "vanilla-soft-serve.jpg" },
   { id: 12, category: "desserts", name: "Cheesecake Slice", desc: "New York style with strawberry coulis", price: 5.49, image: "cheesecake-slice.jpg" },
 ];
-```
-
----
-
-## Tech Stack for Homework 3
-
-- **Framework:** React (Vite recommended: `npm create vite@latest`)
-- **CSS Framework:** Tailwind CSS **or** plain CSS Modules (match original tokens exactly)
-- **Icons:** Font Awesome (`@fortawesome/react-fontawesome`) or Lucide React
-- **Routing:** React Router DOM v6 (optional — single page with `#` hash links is fine)
-- **State:** React Context API + `useReducer` for cart
-- **Hosting:** Netlify or Vercel (free tier)
-- **Version Control:** GitHub (public repo)
-
----
-
-## Key Implementation Notes for Claude
-
-1. **Cart must use React Context** so any component can add to cart and the Header can read the count
-2. **Menu tabs** should filter `menuItems` array using `useState` for active category
-3. **Gallery slider** needs `useState` for current slide index + `useEffect` for optional auto-play
-4. **Hamburger menu** needs `useState` for open/closed + close on nav link click
-5. **Header scroll effect** — use `useEffect` with `window.addEventListener('scroll', ...)` to add `.scrolled` class
-6. **Google Maps** — embed via `<iframe>` pointing to the Inwood, NY location
-7. **Contact form** — use `useState` for field values + `onSubmit` handler with success state
-8. **Image paths** — place all `.jpg` files from original project into `public/` folder and reference as `/hero-bg.jpg` etc., OR import them in `src/assets/`
-9. **CSS variables** — define `:root` variables in a global `index.css` so all components can use them
-10. **`hero-bg.jpg`** is the hero background — reference it in CSS `background-image` via a module import or public URL
-
----
+``
 
 ## Deployment Checklist
 
