@@ -61,6 +61,20 @@
   padding: 2rem 0;
 }
 
+.cart-drawer__success {
+  text-align: center;
+  color: #2ecc71;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+}
+
+.cart-drawer__error {
+  text-align: center;
+  color: #e74c3c;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+}
+
 .cart-drawer__footer {
   padding: 1rem 1.5rem;
   border-top: 1px solid var(--border);

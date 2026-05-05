@@ -40,6 +40,14 @@
   gap: 1.5rem;
 }
 
+.menu__loading {
+  text-align: center;
+  color: var(--text);
+  padding: 3rem 0;
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
+}
+
 @media (max-width: 1024px) {
   .menu__grid {
     grid-template-columns: repeat(2, 1fr);
