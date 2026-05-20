@@ -14,7 +14,7 @@ function About() {
       <div className="about__inner">
         <div className="about__img-wrap">
           <img src="/gallery1.jpg" alt="Burger" className="about__img" />
-          <span className="about__badge">Since 2010</span>
+          <span className="about__badge">Est. 2012</span>
         </div>
         <div className="about__text">
           <p className="section-tag">Our Story</p>

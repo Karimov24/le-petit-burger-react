@@ -6,6 +6,7 @@ import './Gallery.css'
 function Gallery() {
   const [current, setCurrent] = useState(0)
   const [slidesPerView, setSlidesPerView] = useState(3)
+  const [paused, setPaused] = useState(false)
 
   const slides = galleryImages
 
@@ -22,9 +23,10 @@ function Gallery() {
   const next = useCallback(() => setCurrent((c) => (c < maxIndex ? c + 1 : 0)), [maxIndex])
 
   useEffect(() => {
+    if (paused) return
     const timer = setInterval(next, 4000)
     return () => clearInterval(timer)
-  }, [next])
+  }, [next, paused])
 
   return (
     <section className="gallery" id="gallery">
@@ -32,7 +34,11 @@ function Gallery() {
         <p className="section-tag">Gallery</p>
         <h2 className="section-heading">A Feast for the Eyes</h2>
 
-        <div className="gallery__slider">
+        <div
+          className="gallery__slider"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
           <button className="gallery__arrow gallery__arrow--prev" onClick={prev} aria-label="Previous">
             <FaChevronLeft />
           </button>

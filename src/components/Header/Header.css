@@ -69,8 +69,13 @@
   transition: width var(--transition);
 }
 
-.header__nav a:hover::after {
+.header__nav a:hover::after,
+.header__link--active::after {
   width: 100%;
+}
+
+.header__link--active {
+  color: var(--gold);
 }
 
 .header__actions {
